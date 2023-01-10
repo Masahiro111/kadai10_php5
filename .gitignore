@@ -1,5 +1,6 @@
 /node_modules
 /public/build
+/public/blog_template
 /public/hot
 /public/storage
 /storage/*.key
