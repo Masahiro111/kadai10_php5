@@ -79,6 +79,22 @@ class DatabaseSeeder extends Seeder
             'category_id' => 1,
         ]);
 
+        $post->comments()->create([
+            'the_comment' => '1st subaru',
+            'user_id' => $user->id,
+        ]);
+
+        $post->comments()->create([
+            'the_comment' => '2st subaru',
+            'user_id' => $user->id,
+        ]);
+
+        $post->image()->create([
+            'name' => 'random file',
+            'extension' => 'jpg',
+            'path' => '/image/random_file.jpg',
+        ]);
+
         // タグと記事のリレーション設定
         $post->tags()->attach([
             $tag1->id, $tag2->id, $tag3->id
