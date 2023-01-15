@@ -12,8 +12,9 @@ class HomeController extends Controller
     public function index()
     {
         $posts = Post::query()
+            ->latest()
             ->withCount('comments')
-            ->get();
+            ->paginate(5);
 
         $recent_posts = Post::query()
             ->take(5)
