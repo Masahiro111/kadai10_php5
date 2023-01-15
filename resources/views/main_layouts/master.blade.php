@@ -21,6 +21,9 @@
         <meta name="twitter:url" content="" />
         <meta name="twitter:card" content="" />
 
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500,700,900" rel="stylesheet">
 
         <!-- Animate.css -->
@@ -66,10 +69,10 @@
                 <div class="top-menu">
                     <div class="container">
                         <div class="row">
-                            <div class="col-md-2">
-                                <div id="colorlib-logo"><a href="{{ route('home') }}">Blog</a></div>
+                            <div class="col-md-4">
+                                <div id="colorlib-logo" style="text-transform: unset; font-family: 'Manrope';letter-spacing:.1rem;"><a href="{{ route('home') }}">SD<span style="color:#00CC00">G's</span>&nbsp;ACADEMY</a></div>
                             </div>
-                            <div class="col-md-10 text-right menu-1">
+                            <div class="col-md-8 text-right menu-1">
                                 <ul>
                                     <li><a href="{{ route('home') }}">Home</a></li>
                                     <li><a href="{{ route('about') }}">About</a></li>
