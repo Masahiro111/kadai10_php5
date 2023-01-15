@@ -90,9 +90,15 @@ class DatabaseSeeder extends Seeder
         ]);
 
         $post->image()->create([
-            'name' => 'random file',
+            'name' => 'post file',
             'extension' => 'jpg',
-            'path' => '/image/random_file.jpg',
+            'path' => 'images/' . rand(1, 9) . '.jpg',
+        ]);
+
+        $user->image()->create([
+            'name' => 'user file',
+            'extension' => 'jpg',
+            'path' => 'images/' . rand(1, 9) . '.jpg',
         ]);
 
         // タグと記事のリレーション設定
