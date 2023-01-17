@@ -26,37 +26,32 @@ class DatabaseSeeder extends Seeder
         //     'email' => 'test@example.com',
         // ]);
 
-        // ロール名の初期設定
         $role1 = Role::query()->create([
             'name' => 'user',
         ]);
+
         $role2 = Role::query()->create([
-            'name' => 'author',
-        ]);
-        $role3 = Role::query()->create([
             'name' => 'admin',
         ]);
 
-        // タグ名の初期設定
+        $role3 = Role::query()->create([
+            'name' => 'author',
+        ]);
+
         $tag1 = Tag::query()->create([
             'name' => 'php',
         ]);
+
         $tag2 = Tag::query()->create([
             'name' => 'c++',
         ]);
+
         $tag3 = Tag::query()->create([
             'name' => 'ruby',
         ]);
 
-        // カテゴリ名の初期設定
-        // $category = Category::create([
-        //     'name' => 'Education',
-        //     'slug' => 'education'
-        // ]);
-
-        // ユーザー情報の登録
         $user = $role2->users()->create([
-            'name' => 'masahiro',
+            'name' => 'Masahiro',
             'email' => 'test@example.com',
             'password' => Hash::make('password'),
             'status' => 1,
@@ -68,15 +63,6 @@ class DatabaseSeeder extends Seeder
             'user_id' => $user->id,
         ]);
 
-        // ユーザー情報の登録
-        $admin = $role3->users()->create([
-            'name' => 'admin',
-            'email' => 'admin@example.com',
-            'password' => Hash::make('password'),
-            'status' => 1,
-        ]);
-
-        // 記事情報の登録
         $post = $user->posts()->create([
             'title' => 'This is title',
             'slug' => 'This is slug',
@@ -107,7 +93,6 @@ class DatabaseSeeder extends Seeder
             'path' => 'images/' . rand(1, 9) . '.jpg',
         ]);
 
-        // タグと記事のリレーション設定
         $post->tags()->attach([
             $tag1->id, $tag2->id, $tag3->id
         ]);

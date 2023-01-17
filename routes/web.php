@@ -43,8 +43,10 @@ Route::get('/tags/{tag:name}', [TagController::class, 'show'])
 
 //  ADMIN  ROUTES  ------------------------------------------------------------------------------------
 
-Route::get('/admin', [DashboardController::class, 'index'])
-    ->name('admin.index');
+Route::prefix('admin')->name('admin.')->middleware(['auth', 'isAdmin'])->group(function () {
+    Route::get('/', [DashboardController::class, 'index'])
+        ->name('index');
+});
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
