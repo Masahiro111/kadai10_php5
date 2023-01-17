@@ -18,8 +18,8 @@
         <!-- Bootstrap CSS -->
         <link href="{{ asset('admin_dashboard_assets/css/bootstrap.min.css') }}" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
-        <link href="{{ asset('admin_dashboard_assets/css/app.css') }}') }}" rel="stylesheet">
-        <link href="{{ asset('admin_dashboard_assets/css/icons.css') }}') }}" rel="stylesheet">
+        <link href="{{ asset('admin_dashboard_assets/css/app.css') }}" rel="stylesheet">
+        <link href="{{ asset('admin_dashboard_assets/css/icons.css') }}" rel="stylesheet">
 
         <!-- Theme Style CSS -->
         <link rel="stylesheet" href="{{ asset('admin_dashboard_assets/css/dark-theme.css') }}" />
@@ -32,10 +32,10 @@
         <!--wrapper-->
         <div class="wrapper">
             <!--start header -->
-            @include("layouts.header")
+            @include("admin_dashboard.layouts.header")
             <!--end header -->
             <!--navigation-->
-            @include("layouts.nav")
+            @include("admin_dashboard.layouts.nav")
             <!--end navigation-->
             <!--start page wrapper -->
             @yield("wrapper")
