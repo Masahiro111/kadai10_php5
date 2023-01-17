@@ -56,6 +56,12 @@
 	<script src="js/respond.min.js"></script>
 	<![endif]-->
 
+        <style>
+            .categories-col .block-21 .text {
+                width: 100%;
+            }
+        </style>
+
         @yield('custom_css')
 
     </head>
@@ -75,10 +81,16 @@
                             <div class="col-md-8 text-right menu-1">
                                 <ul>
                                     <li><a href="{{ route('home') }}">Home</a></li>
+                                    <li class="has-dropdown">
+                                        <a href="{{ route('categories.index') }}">Categories</a>
+                                        <ul class="dropdown">
+                                            @foreach($navbar_categories as $category)
+                                            <li><a href="{{ route('categories.show', $category) }}">{{ $category->name }}</a></li>
+                                            @endforeach
+                                        </ul>
+                                    </li>
                                     <li><a href="{{ route('about') }}">About</a></li>
                                     <li><a href="{{ route('contact.create') }}">Contact</a></li>
-
-
 
                                     @guest
                                     <li class="btn-cta"><a href="{{ route('login') }}"><span>Sign in</span></a></li>
@@ -202,7 +214,7 @@
                         <div class="col-md-3 colorlib-widget">
                             <h4>Recent Post</h4>
                             <div class="f-blog">
-                                <a href="blog.html" class="blog-img" style="background-image: url(blog_template/images/blog-1.jpg);">
+                                <a href="blog.html" class="blog-img" style="background-image: url({{ asset('blog_template/images/blog-1.jpg') }});">
                                 </a>
                                 <div class="desc">
                                     <h2><a href="blog.html">Creating Mobile Apps</a></h2>

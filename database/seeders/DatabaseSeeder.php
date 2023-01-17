@@ -49,10 +49,10 @@ class DatabaseSeeder extends Seeder
         ]);
 
         // カテゴリ名の初期設定
-        $category = Category::create([
-            'name' => 'Education',
-            'slug' => 'education'
-        ]);
+        // $category = Category::create([
+        //     'name' => 'Education',
+        //     'slug' => 'education'
+        // ]);
 
         // ユーザー情報の登録
         $user = $role2->users()->create([
@@ -60,6 +60,12 @@ class DatabaseSeeder extends Seeder
             'email' => 'test@example.com',
             'password' => Hash::make('password'),
             'status' => 1,
+        ]);
+
+        $category = Category::create([
+            'name' => 'Education',
+            'slug' => 'education',
+            'user_id' => $user->id,
         ]);
 
         // ユーザー情報の登録
