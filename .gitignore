@@ -3,6 +3,7 @@
 /public/blog_template
 /public/hot
 /public/storage
+/public/admin_dashboard_assets
 /storage/*.key
 /vendor
 .env
