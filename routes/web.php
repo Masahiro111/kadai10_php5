@@ -46,6 +46,19 @@ Route::get('/tags/{tag:name}', [TagController::class, 'show'])
 Route::prefix('admin')->name('admin.')->middleware(['auth', 'isAdmin'])->group(function () {
     Route::get('/', [DashboardController::class, 'index'])
         ->name('index');
+
+    Route::prefix('/posts')
+        ->controller(AdminPostsController::class)
+        ->name('posts.')
+        ->group(function () {
+            Route::get('', 'index')->name('index');
+            Route::get('create', 'create')->name('create');
+            Route::post('', 'store')->name('store');
+            Route::get('{post}', 'show')->name('show');
+            Route::get('{post}/edit', 'edit')->name('edit');
+            Route::put('{post}', 'update')->name('update');
+            Route::delete('{post}', 'destroy')->name('destroy');
+        });
 });
 
 Route::middleware('auth')->group(function () {
