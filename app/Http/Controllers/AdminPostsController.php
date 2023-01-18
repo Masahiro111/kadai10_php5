@@ -69,7 +69,7 @@ class AdminPostsController extends Controller
             ]);
 
             return redirect()
-                ->route('admin.posts.create')
+                ->route('admin.posts.index')
                 ->with('success', 'Post has been created');
         }
     }
@@ -117,11 +117,11 @@ class AdminPostsController extends Controller
                 'extension' => $file_extension,
                 'path' => $path,
             ]);
-
-            return redirect()
-                ->route('admin.posts.edit', $post)
-                ->with('success', 'Post has been updated.');
         }
+
+        return redirect()
+            ->route('admin.posts.edit', $post)
+            ->with('success', 'Post has been updated.');
     }
 
     public function destroy(Post $post)
