@@ -18,7 +18,7 @@ Laravel で作成したカテゴリ、タグ、コメント機能付きブログ
   
 ## ④ 質問・疑問・感想、シェアしたいこと等なんでも
 **Udemy**  
-Build Complete Blog System With Laravel 8 ( Upgraded to 9 )
+Build Complete Blog System With Laravel 8 ( Upgraded to 9 )  
 https://www.udemy.com/course/build-complete-blog-system-with-laravel-8/
   
 **Arrown**  
