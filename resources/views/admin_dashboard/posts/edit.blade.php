@@ -117,9 +117,7 @@
 
                                     <div class="mb-3">
                                         <label for="inputProductDescription" class="form-label">Post Content</label>
-                                        <textarea name='body' id='post_content' class="form-control" id="inputProductDescription" rows="3">
-                                                {{ old("body", str_replace('../../../', '/', $post->body) ) }}
-                                            </textarea>
+                                        <textarea name='body' id='post_content' class="form-control" id="inputProductDescription" rows="3">{{ old("body", str_replace('../../../', '/', $post->body) ) }}</textarea>
 
                                         @error('body')
                                         <p class='text-danger'>{{ $message }}</p>

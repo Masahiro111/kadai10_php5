@@ -29,7 +29,10 @@
 
         <link rel="stylesheet" href="{{ asset('admin_dashboard_assets/css/my_style.css') }}" />
 
-        <title>Rocker - Bootstrap 5 Admin Dashboard Template</title>
+        <title>
+            SDG's ACADEMY Admin panel
+            {{-- Rocker - Bootstrap 5 Admin Dashboard Template --}}
+        </title>
     </head>
 
     <body>
@@ -54,9 +57,6 @@
             <!--end overlay-->
             <!--Start Back To Top Button--> <a href="javaScript:;" class="back-to-top"><i class='bx bxs-up-arrow-alt'></i></a>
             <!--End Back To Top Button-->
-            <footer class="page-footer">
-                <p class="mb-0">Copyright © 2021. All right reserved.</p>
-            </footer>
         </div>
         <!--end wrapper-->
         <!--start switcher-->

@@ -39,27 +39,27 @@ class DatabaseSeeder extends Seeder
         ]);
 
         $tag1 = Tag::query()->create([
-            'name' => 'php',
+            'name' => 'ショーシャルビジネス',
         ]);
 
         $tag2 = Tag::query()->create([
-            'name' => 'c++',
+            'name' => 'イベント',
         ]);
 
         $tag3 = Tag::query()->create([
-            'name' => 'ruby',
+            'name' => '初心者歓迎',
         ]);
 
         $user = $role2->users()->create([
-            'name' => 'Masahiro',
+            'name' => 'Test User',
             'email' => 'test@example.com',
             'password' => Hash::make('password'),
             'status' => 1,
         ]);
 
         $category = Category::create([
-            'name' => 'Education',
-            'slug' => 'education',
+            'name' => '未分類',
+            'slug' => 'free-theme',
             'user_id' => $user->id,
         ]);
 
@@ -72,12 +72,12 @@ class DatabaseSeeder extends Seeder
         ]);
 
         $post->comments()->create([
-            'the_comment' => '1st subaru',
+            'the_comment' => 'test comment 1',
             'user_id' => $user->id,
         ]);
 
         $post->comments()->create([
-            'the_comment' => '2st subaru',
+            'the_comment' => 'test comment 2',
             'user_id' => $user->id,
         ]);
 
