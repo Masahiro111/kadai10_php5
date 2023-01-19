@@ -24,3 +24,7 @@ https://www.udemy.com/course/build-complete-blog-system-with-laravel-8/
 **Arrown**  
 Laravel をさくらインターネットにアップロードする方法  
 https://arrown-blog.com/laravel-sakura-deploy/
+
+## 作成したブログのスクショ
+
+<img src="upload.jpg">
