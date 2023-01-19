@@ -12,7 +12,7 @@ class CategoryController extends Controller
     public function index()
     {
         return view('categories.index', [
-            'categories' => Category::withCount('posts')->paginate(100)
+            'categories' => Category::withCount('posts')->latest()->paginate(100)
         ]);
     }
 
@@ -25,10 +25,11 @@ class CategoryController extends Controller
 
         $categories = Category::query()
             ->withCount('posts')
-            ->orderBy('posts_count', 'desc')
+            ->latest()
             ->get();
 
         $tags = Tag::query()
+            ->latest()
             ->take(50)
             ->get();
 
@@ -38,7 +39,7 @@ class CategoryController extends Controller
             'tags' => $tags,
 
             'category' => $category,
-            'posts' => $category->posts()->paginate(10),
+            'posts' => $category->posts()->latest()->paginate(10),
         ]);
     }
 }

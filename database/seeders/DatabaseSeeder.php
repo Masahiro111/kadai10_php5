@@ -65,7 +65,7 @@ class DatabaseSeeder extends Seeder
 
         $post = $user->posts()->create([
             'title' => 'This is title',
-            'slug' => 'This is slug',
+            'slug' => 'This_is_slug',
             'excerpt' => 'This is excerpt',
             'body' => 'This is content',
             'category_id' => 1,
