@@ -26,4 +26,4 @@ Laravel をさくらインターネットにアップロードする方法
 https://arrown-blog.com/laravel-sakura-deploy/
 
 ## 作成したブログのスクショ
-<img src="upload.jpg">  
+<img src="https://raw.githubusercontent.com/Masahiro111/kadai10_php5/main/upload.jpg">  
